@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="navbar">
+        <div class="navbar-toggle-mobile">
+            <button type="button" onclick="openMenuMobile()"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="navbar-logo">
+            <img src="assets/images/logo-playground-white.png" class="logo" alt="logo">
+        </div>
+        <div id="navbarLinkContainer" class="navbar-link-container">
+            <button type="button" class="close-menu-mobile" onclick="closeMenuMobile()">X</button>
+            <a href="#we-are" class="navbar-anchor" onclick="closeMenuMobile()">we are</a>
+            <a href="#we-do" class="navbar-anchor" onclick="closeMenuMobile()">we do</a>
+            <a href="#careers" class="navbar-anchor" onclick="closeMenuMobile()">careers</a>
+            <a href="#contact-us" class="navbar-anchor" onclick="closeMenuMobile()">contact us</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="main-carousel" data-flickity='{ "wrapAround": true }'>
+            <div class="carousel-cell">
+                <img src="assets/images/slide-hello.jpg" alt="carousel image">
+                <div class="slider-text">
+                    <h2>lorem ipsum.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lectus purus, imperdiet nec egestas sit amet, convallis non orci</p>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <img src="assets/images/slide-circle.jpg" alt="carousel image">
+                <div class="slider-text">
+                    <h2>lorem ipsum.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lectus purus, imperdiet nec egestas sit amet, convallis non orci</p>
+                </div>
+            </div>
+            <div class="carousel-cell">
+                <img src="assets/images/slide-play.jpg" alt="carousel image">
+                <div class="slider-text">
+                    <h2>lorem ipsum.</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lectus purus, imperdiet nec egestas sit amet, convallis non orci</p>
+                </div>
+            </div>
+        </div>
+        <div class="cards-container">
+            <div class="single-card">
+                <div class="card-header play-harder"></div>
+                <div class="card-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed elit lobortis, imperdiet magna non, mollis nibh. Phasellus luctus enim at odio euismod
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="card-btn">Read more</button>
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-header simplicity"></div>
+                <div class="card-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lectus purus, imperdiet nec egestas sit amet</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="card-btn">Read more</button>
+                </div>
+            </div>
+            <div class="single-card">
+                <div class="card-header innovation"></div>
+                <div class="card-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="card-btn">Read more</button>
+                </div>
+            </div>
+        </div>
+        <div id="we-are" class="banner-container">
+            <div class="img-banner">
+                <img src="assets/images/banner-we-are.jpg" alt="banner we are">
+            </div>
+            <div class="text-banner left">
+                <h2>we <br>are.</h2>
+                <p>consectetur adipiscing elit.<br>Mauris lectus purus</p>
+                <button type="button" class="banner-btn">The players &nbsp;<i class="fa fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div id="we-do" class="banner-container reverse">
+            <div class="img-banner">
+                <img src="assets/images/banner-we-do.jpg" alt="banner we do">
+            </div>
+            <div class="text-banner right">
+                <h2>we <br>do.</h2>
+                <p>consectetur adipiscing elit.<br>Mauris lectus purus</p>
+                <button type="button" class="banner-btn">The projects &nbsp;<i class="fa fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div id="careers" class="banner-container">
+            <div class="img-banner">
+                <img src="assets/images/banner-carrers.jpg" alt="banner careers">
+            </div>
+            <div class="text-banner left">
+                <h2>careers.</h2>
+                <p>consectetur adipiscing elit.<br>Mauris lectus purus</p>
+                <button type="button" class="banner-btn">The positions &nbsp;<i class="fa fa-angle-right"></i></button>
+            </div>
+        </div>
+        <div class="tab-container">
+            <div class="list-container">
+                <ul class="tab-link-container">
+                    <li class="tab-link active"><button id="defaultOpen" type="button" onclick="changeTabContent(this,1)">Vestibilum ad odio sit amet &nbsp;<i class="fa fa-angle-down"></i></button></li>
+                    <li class="tab-link"><button type="button" onclick="changeTabContent(this,2)">Sed vehicula neque &nbsp;<i class="fa fa-angle-up"></i></button></li>
+                    <li class="tab-link"><button type="button" onclick="changeTabContent(this,3)">Nulla id libero pretium &nbsp;<i class="fa fa-angle-up"></i></button></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <img id="loading" src="assets/images/loader.png" class="loader" alt="loader">
+                <h2 id="tabContentTitle"></h2><br>
+                <p id="tabContentText"></p>
+            </div>
+        </div>
+        <div id="contact-us" class="contact-container">
+            <div class="contact-text">
+                <h2>contact<br>us.</h2>
+                <p>Playground<br>Via Mazzini 3/C<br>Cernusco sul Naviglio (Milano)<br>-<br>T +39 0240706003</p>
+            </div>
+            <div class="contact-form">
+                <form id="contactsForm" onsubmit="return validateForm()">
+                    <div class="inputs-aligned">
+                        <input type="text" id="name" name="name" placeholder="name">
+                        <input type="text" id="lastName" name="lastname" placeholder="last name">
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="email*">
+                    <textarea placeholder="message*" id="message" rows="4"></textarea>
+                    <input type="submit" value="Send >">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-logo">
+            <img src="assets/images/logo-playground-white.png" alt="logo footer">
+        </div>
+        <div class="footer-anchors">
+            <a href="#we-are" class="footer-anchor">we are</a>
+            <a href="#we-do" class="footer-anchor">we do</a>
+            <a href="#careers" class="footer-anchor">careers</a>
+            <a href="#contact-us" class="footer-anchor">contact us</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="https://it.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </footer>
+    <div id="cookieBar" class="cookie-bar">
+        <p>Our website uses cookies to improve your experience. To find out more about the cookies we use please see our Cookie Policy.</p>
+        <button type="button" class="cookie-btn" onclick="hideCookieBar()">ok</button>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+    </script>
+	<script src="index.js"></script>
+  </body>
+</html>
